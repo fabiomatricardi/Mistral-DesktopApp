@@ -72,7 +72,6 @@ def genRANstring(n):
 def create_chat(apikey):   
 # Set HF API token  and HF repo
     from mistralai import Mistral
-    #APIK = 'jspAEJOmr87tF7R7yMmgYyEgKbQDKR0c'
     client = Mistral(api_key=apikey)
     modelname = "Mistral AI"
     print(f'Loaded remote model {modelname}...')
@@ -96,10 +95,8 @@ av_ass =  Image.open(resource_path('assistant.png'))   #'Ⓜ️'   #'images/assi
 ### START STREAMLIT UI
 # Create a header element
 st.image(Image.open(resource_path('mistralai.png')), width=700)### st.image('images/mistralai.png',use_container_width=True)
-#st.code(intro, language=None)
 mytitle = f'> *🌟 {modelname} with {nCTX} tokens Context window* - Turn based Chat available with max capacity of :orange[**{st.session_state.maxTurns} messages**].'
 st.markdown(mytitle, unsafe_allow_html=True)
-
 
 # CREATE THE SIDEBAR
 with st.sidebar:
@@ -139,7 +136,7 @@ if myprompt := st.chat_input("What is an AI model?"):
         st.markdown(myprompt)
         usertext = f"user: {myprompt}"
         writehistory(st.session_state.logfilename,usertext)
-        # Display assistant response in chat message container
+    # Display assistant response in chat message container
     with st.chat_message("assistant",avatar=av_ass):
         message_placeholder = st.empty()
         with st.spinner("Thinking..."):
