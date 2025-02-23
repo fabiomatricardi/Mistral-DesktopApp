@@ -24,7 +24,7 @@ Two new sub-directory will be created:
 
 
 ### The building process
-
+<img src='https://github.com/fabiomatricardi/Mistral-DesktopApp/raw/main/st-DeskApp-create_SM.gif' width=950>
 
 ### Running the App
-
+<img src='https://github.com/fabiomatricardi/Mistral-DesktopApp/raw/main/st-DeskApp-run.gif' width=950>
