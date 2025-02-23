@@ -1,0 +1,8 @@
+pip install streamlit mistralai streamlit-desktop-app
+I had to remove tiktoken (broken encoding)
+
+
+streamlit-desktop-app build .\Mistral_stappFULL.py --name MistralREMOTE --pyinstaller-options --onefile --collect-all streamlit --hidden-import mistralai --contents-directory images --add-data user.png:. --add-data assistant.png:. -i .\assistant.ico --hidden-import PIL --add-data mistralai.png:. --add-data mistral-banner.png:.
+
+
+streamlit-desktop-app.exe build .\MistralREMOTE.py --name Mistral_Desktop  --pyinstaller-options --onefile --collect-all streamlit --hidden-import mistralai --contents-directory images --add-data user.png:. --add-data assistant.png:. -i .\assistant.ico --hidden-import PIL --add-data mistralai.png:. --add-data mistral-banner.png:.
