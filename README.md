@@ -4,14 +4,18 @@ Streamlit Chat-bot with Mistral.ai free API into a standalone Windows Desktop Ap
 ## Instructions
 
 - Clone the repo
-- Install the dependencies
-```bash
-pip install streamlit mistralai streamlit-desktop-app
-```
 
+- create the virtual environment
+```bash
+python -m venv venv
+```
 - activate the virtual environment
 ```bash
 .\venv\Scripts\activate
+```
+- Install the dependencies
+```bash
+pip install streamlit mistralai streamlit-desktop-app
 ```
 - from the terminal with the venv activated, run
 ```bash
